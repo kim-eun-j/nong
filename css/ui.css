@@ -1,0 +1,632 @@
+@charset "UTF-8";
+
+/* @font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ededed;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    vertical-align: top;
+}
+
+address,
+i,
+em {
+    font-style: normal;
+}
+
+.Wrap {
+    /* width: 100%; */
+    height: 100%;
+    overflow: hidden;
+}
+
+/* header */
+
+#header {
+    /* width: 100%; */
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.border {
+    border-bottom: 1px solid #cccccc;
+}
+
+h1 {
+    padding: 2.5% 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1>img {
+    width: 8vw;
+}
+
+/*상단 */
+
+.dateWrap {
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 5% 0;
+}
+
+.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+
+.prev>a {
+    display: block;
+    background-image: url(../images/prev.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10vw;
+    padding-top: 100%;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+
+.next>a {
+    display: block;
+    background-image: url(../images/next.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10vw;
+    padding-top: 100%;
+}
+
+.tList {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.tList>li {
+    flex: 1;
+    background-color: #fff;
+    position: relative;
+    padding: 3% 0;
+}
+
+.tList>li::after {
+    content: "";
+    display: inline-block;
+    border-right: 1px solid #cccccc;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.tList>li:last-child::after {
+    display: none;
+}
+
+/* font-size */
+
+h1>p,
+.sNum {
+    font-size: 5vw;
+}
+
+.t30 {
+    font-size: 4vw;
+}
+
+.t38 {
+    font-size: 5.5vw;
+}
+
+.date>span {
+    font-size: 4.5vw;
+    font-weight: 500;
+}
+
+.tList a {
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+/* 상단 아이콘 */
+
+.ham {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4%;
+}
+
+.tPrev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4%;
+}
+
+.ham img,
+.plus img {
+    width: 5vw;
+}
+
+.tPrev img {
+    width: 3vw;
+}
+
+/* font-weight */
+
+.bold {
+    font-weight: 600;
+}
+
+.thin {
+    font-weight: 300;
+}
+
+/* 차량정보 */
+
+.info {
+    position: relative;
+    width: 100%;
+    background-color: #2659b2;
+}
+
+.iTxt {
+    padding: 5%;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.iTxt>.carNum {
+    font-size: 7vw;
+}
+
+.iTxt>.name {
+    font-size: 4.5vw;
+    font-weight: 500;
+}
+
+.iTxt>.text {
+    font-weight: 200;
+    padding-top: 3%;
+    box-sizing: border-box;
+}
+
+.iTxt>.plus {
+    position: absolute;
+    bottom: 20%;
+    right: 7%;
+}
+
+/* eco지수, 안전운행 */
+
+.grade {
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.grade>.title {
+    color: #2659b2;
+    font-weight: 500;
+}
+
+.grade>.sNum {
+    line-height: 285%;
+}
+
+.grade img {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 20%;
+}
+
+.score {
+    padding-left: 20px;
+}
+
+.score>li {
+    list-style: disc;
+    line-height: 200%;
+}
+
+.score .sTx {
+    font-size: 3.5vw;
+    font-weight: 300;
+}
+
+.score span {
+    font-weight: 500;
+}
+
+.score .total {
+    padding-left: 9%;
+}
+
+.score .color {
+    color: #41b971;
+    padding-left: 3.5%;
+}
+
+/* 급가속 급감속 과속 공회전 */
+
+.list {
+    background-color: #fff;
+    padding: 4% 0;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.list>li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    padding: 3%;
+}
+
+.list>li:last-child {
+    border: none;
+}
+
+.list .imgBx {
+    padding-left: 4%;
+}
+
+.list .imgBx img {
+    width: 6.5vw;
+}
+
+.list .inS {
+    padding-left: 12px;
+}
+
+.list .toS {
+    padding-right: 4%;
+}
+
+/* 총점 */
+
+.average {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.average>li {
+    position: relative;
+    flex: 1;
+}
+
+.average>li::after {
+    content: "";
+    display: block;
+    border-right: 1px solid #cccccc;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-left: 50px;
+}
+
+.average>li:last-child::after {
+    display: none;
+}
+
+/* 그래프 */
+
+.graphWrap {
+    background-color: #fff;
+    text-align: center;
+    padding: 6% 6% 27% 6%;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* margin-bottom: 10%; */
+}
+
+.graph {
+    background-image: url(../images/graph.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    width: 100%;
+    padding-top: 72%;
+    overflow: hidden;
+}
+
+.graphWrap>p {
+    color: #808080;
+    padding-top: 8%;
+}
+
+/* 상세 그래프 */
+.g2Wrap,
+.sumWrap {
+    margin: 5% 5% 5% 5%;
+}
+
+.g2Box {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+    padding: 5%;
+}
+
+.g2 {
+    background-image: url(../images/graph2_1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    width: 100%;
+    padding-top: 72%;
+}
+
+/* 요약 */
+
+.sumWrap>p,
+.oWrap>p {
+    font-size: 4.5vw;
+}
+
+.sumList {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sumList>li {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    width: 48%;
+    margin: 1% 0;
+    padding: 4% 0;
+    box-sizing: border-box;
+}
+
+/* table */
+.tableWrap {
+    margin: 5% 0 5% 5%;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 200%;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-style: hidden;
+    white-space: nowrap;
+    table-layout: fixed;
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+thead,
+tfoot {
+    background-color: #f6f7f9;
+    border-radius: 15px;
+}
+
+tbody {
+    background-color: #fff;
+}
+
+thead th {
+    font-weight: 400;
+}
+
+tbody td {
+    font-weight: 300;
+}
+
+/* 총 발생건수 */
+.oWrap {
+    margin: 5% 5% 21% 5%;
+}
+
+.bWrap {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+}
+
+.tPerWrap {
+    position: relative;
+    padding-top: 56%;
+    box-sizing: border-box;
+}
+
+.pImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/percent.png);
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 39.8%;
+    padding-top: 39.8%;
+}
+
+.oList>li {
+    border-top: 1px solid #cccccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 5%;
+    box-sizing: border-box;
+}
+
+.lStyle {
+    position: relative;
+    padding-left: 5%;
+}
+
+.lStyle::before {
+    content: "";
+    display: inline-block;
+    width: calc(100% - 90%);
+    height: calc(100% - 75%);
+    border-radius: 50%;
+    background-color: #f8544c;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.bCol::before {
+    background-color: #2659b2;
+}
+
+.gCol::before {
+    background-color: #11a84e;
+}
+
+.oCol::before {
+    background-color: #f2802d;
+}
+
+/* 하단메뉴 */
+
+footer {
+    text-align: center;
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    background-color: #2659b2;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.menu>li {
+    flex: 1;
+    position: relative;
+}
+
+.menu>li p {
+    line-height: 178%;
+}
+
+.menu>li::after {
+    content: "";
+    display: block;
+    border-right: 1px solid #cccccc;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-left: 50px;
+}
+
+.menu>li:last-child::after {
+    border: none;
+}
+
+.menu a {
+    color: #fff;
+}
+
+.menu p {
+    font-size: 2.5vw;
+}
+
+.menu img {
+    width: 6vw;
+}
+
+@media screen and (max-width:540px) {
+
+    .ham img,
+    .plus img {
+        max-width: 25px;
+        width: 100%;
+    }
+
+    .tPrev img {
+        max-width: 16px;
+        width: 100%;
+    }
+
+    .menu img {
+        max-width: 30px;
+        width: 100%;
+    }
+
+    .menu>li:nth-child(3) img {
+        max-width: 24px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .list .imgBx img {
+        width: 8.5vw;
+    }
+}
